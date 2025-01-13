@@ -1,4 +1,7 @@
-import { Phone, Clock, Languages, ArrowRightLeft, Database, HeadphonesIcon, HeadsetIcon } from "lucide-react";
+"use client";
+
+import { motion} from "framer-motion";
+import { Phone, Clock, Languages, ArrowRightLeft, Database, ShoppingCart, Building2, MessageCircle, Bot, Sparkles } from "lucide-react";
 
 const features = [
   {
@@ -36,92 +39,189 @@ const features = [
 const useCases = [
   {
     text: "Podpora prodeje",
-    rotation: 0
+    description: "Automatizace prodejních procesů a podpora zákazníků 24/7",
+    icon: ShoppingCart,
+    stat: "95%",
+    statLabel: "Úspěšnost"
   },
   {
     text: "Virtuální recepce",
-    rotation: 72
+    description: "Profesionální první kontakt s vašimi klienty",
+    icon: Building2,
+    stat: "24/7",
+    statLabel: "Dostupnost"
   },
   {
-    text: "Pracuje 24/7",
-    rotation: 144
+    text: "Pracuje nepřetržitě",
+    description: "Nepřetržitá dostupnost pro vaše zákazníky",
+    icon: Clock,
+    stat: "0s",
+    statLabel: "Čekací doba"
   },
   {
-    text: "Dotazy na zpětnou vazbu",
-    rotation: 216
+    text: "Zpětná vazba",
+    description: "Automatický sběr hodnocení a připomínek",
+    icon: MessageCircle,
+    stat: "500+",
+    statLabel: "Hovorů denně"
   },
   {
     text: "Virtuální asistentka",
-    rotation: 288
+    description: "Inteligentní řešení rutinních požadavků",
+    icon: Bot,
+    stat: "80%",
+    statLabel: "Automatizace"
   }
 ];
 
 export function Features() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
-    <section id="features" className="relative w-full py-24 md:py-32">
+    <section id="features" className="relative w-full py-24 md:py-32 overflow-hidden">
       <div className="container relative max-w-5xl mx-auto px-4">
-        <div className="space-y-16">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="space-y-16"
+        >
           {/* Main Features */}
           <div className="space-y-12">
-            <div className="text-center space-y-4">
+            <motion.div variants={itemVariants} className="text-center space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mx-auto">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm font-medium">Funkce voicebota</span>
+              </div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Trochu podrobněji</h2>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature) => (
-                <div key={feature.title} className="relative p-6 rounded-lg border bg-card">
-                  <div className="space-y-4">
+                <motion.div
+                  key={feature.title}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02 }}
+                  className="relative group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/0 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative p-6 rounded-2xl border bg-card/50 backdrop-blur-sm space-y-4">
                     <div className="flex items-center gap-4">
-                      <div className="p-2 rounded-md bg-primary/10">
+                      <div className="p-3 rounded-xl bg-primary/10 group-hover:scale-110 transition-transform">
                         <feature.icon className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-semibold">{feature.title}</h3>
+                      <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{feature.title}</h3>
                     </div>
                     <p className="text-muted-foreground">{feature.description}</p>
                     <p className="text-sm text-muted-foreground">{feature.details}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
 
           {/* Use Cases */}
-          <div className="space-y-8">
+          <motion.div 
+            variants={itemVariants} 
+            className="space-y-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <div className="text-center space-y-4">
               <h3 className="text-2xl font-bold">Příklady využití Voicebota</h3>
-              <p className="text-muted-foreground">
-                Virtuálního asistenta využijete všude, kde chcete být neustále online
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Virtuálního asistenta využijete všude, kde chcete být neustále online a poskytovat profesionální služby
               </p>
             </div>
 
-            <div className="relative w-[300px] h-[300px] mx-auto md:w-[400px] md:h-[400px]">
-              {/* Center Circle */}
-              <div className="absolute inset-0 m-auto w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
-                <HeadsetIcon className="w-12 h-12 text-primary" />
-              </div>
-              
-              {/* Orbiting Items */}
-              {useCases.map((useCase) => (
-                <div
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+              {useCases.map((useCase, index) => (
+                <motion.div
                   key={useCase.text}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  style={{
-                    transform: `
-                      translate(-50%, -50%)
-                      rotate(${useCase.rotation}deg)
-                      translateX(140px)
-                      rotate(-${useCase.rotation}deg)
-                    `
+                  variants={{
+                    hidden: { 
+                      opacity: 0,
+                      y: 20,
+                      scale: 0.95
+                    },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      transition: {
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 15,
+                        delay: index * 0.1
+                      }
+                    }
                   }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { type: "spring", stiffness: 300 }
+                  }}
+                  className="group relative w-full max-w-[280px] aspect-square"
                 >
-                  <div className="p-4 rounded-full border bg-card shadow-lg hover:scale-110 transition-transform">
-                    <p className="text-sm font-medium whitespace-nowrap">{useCase.text}</p>
+                  <motion.div
+                    initial={false}
+                    animate={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"
+                  />
+                  <div className="relative h-full rounded-full border bg-card hover:bg-card/80 transition-colors p-8 flex flex-col items-center justify-center text-center">
+                    <motion.div 
+                      className="mb-4"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
+                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                        <useCase.icon className="w-8 h-8 text-primary" />
+                      </div>
+                    </motion.div>
+                    <div className="space-y-1 mb-3">
+                      <h4 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                        {useCase.text}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {useCase.description}
+                      </p>
+                    </div>
+                    <motion.div 
+                      className="mt-auto space-y-0.5"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.5 + index * 0.1 }}
+                    >
+                      <div className="text-2xl font-bold text-primary">
+                        {useCase.stat}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {useCase.statLabel}
+                      </div>
+                    </motion.div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
