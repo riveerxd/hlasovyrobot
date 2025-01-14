@@ -40,10 +40,12 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="try" smooth={true} duration={500} offset={-500} className="w-full">
               <Button size="lg" className="group">
                 Vyzkoušet zdarma
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
+              </Link>
               <Button size="lg" variant="outline">
                 <Link to="samples" smooth={true} duration={500} offset={-100} className="w-full">
                   Ukázky voicebota
@@ -115,10 +117,11 @@ export function Hero() {
                   </div>
                 </div>
 
-                <Button className="w-full gap-2">
+                <Link to="try" smooth={true} duration={500} offset={-500} className="w-full gap-2 flex flex-row items-center bg-black rounded-lg p-3 text-white cursor-pointer">
                   <Phone className="w-4 h-4" />
                   Vyzkoušet hovor s voicebotem
-                </Button>
+              
+                </Link>
               </div>
             </div>
           </motion.div>

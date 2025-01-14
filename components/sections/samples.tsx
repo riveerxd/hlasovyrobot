@@ -8,24 +8,51 @@ import { motion } from "framer-motion";
 const samples = [
   {
     title: "Objednávka termínu",
-    description: "Voicebot pomáhá klientovi s objednáním termínu prohlídky.",
+    description: "Automatické plánování schůzek a prohlídek",
+    details: [
+      "Kontrola dostupnosti termínů",
+      "Potvrzení a připomenutí schůzky",
+      "Možnost přeplánování"
+    ],
     audioUrl: "/samples/sample1.mp3",
     icon: Calendar,
-    color: "from-blue-500/20 to-purple-500/20"
+    color: "from-blue-500/20 to-purple-500/20",
+    stats: {
+      value: "85%",
+      label: "úspěšnost objednávek"
+    }
   },
   {
     title: "Technická podpora",
-    description: "Voicebot řeší běžný technický problém s internetem.",
+    description: "Řešení běžných technických problémů",
+    details: [
+      "Diagnostika připojení",
+      "Restart zařízení na dálku",
+      "Eskalace složitějších případů"
+    ],
     audioUrl: "/samples/sample2.mp3",
     icon: Settings,
-    color: "from-green-500/20 to-emerald-500/20"
+    color: "from-green-500/20 to-emerald-500/20",
+    stats: {
+      value: "3min",
+      label: "průměrná doba řešení"
+    }
   },
   {
     title: "Změna údajů",
-    description: "Voicebot asistuje při změně kontaktních údajů.",
+    description: "Bezpečná aktualizace klientských dat",
+    details: [
+      "Ověření identity volajícího",
+      "Validace nových údajů",
+      "Okamžitá aktualizace v systému"
+    ],
     audioUrl: "/samples/sample3.mp3",
     icon: FileEdit,
-    color: "from-orange-500/20 to-red-500/20"
+    color: "from-orange-500/20 to-red-500/20",
+    stats: {
+      value: "99%",
+      label: "přesnost zpracování"
+    }
   }
 ];
 
@@ -94,18 +121,39 @@ export function Samples() {
               >
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${sample.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
                 <div className="relative p-6 rounded-2xl border bg-card/50 backdrop-blur-sm space-y-6">
+                  {/* Header */}
                   <div className="flex items-center gap-4">
-                    <div className="p-2 rounded-lg bg-primary/10">
+                    <div className="p-3 rounded-xl bg-primary/10 group-hover:scale-110 transition-transform">
                       <sample.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">{sample.title}</h3>
+                      <h3 className="font-semibold group-hover:text-primary transition-colors">{sample.title}</h3>
                       <p className="text-sm text-muted-foreground">{sample.description}</p>
                     </div>
                   </div>
+                  
+                  {/* Details */}
+                  <ul className="space-y-2">
+                    {sample.details.map((detail, index) => (
+                      <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <div className="w-1 h-1 rounded-full bg-primary" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Stats */}
+                  <div className="flex items-center justify-between pt-2 border-t">
+                    <div className="text-sm text-muted-foreground">
+                      {sample.stats.label}
+                    </div>
+                    <div className="text-lg font-bold text-primary">
+                      {sample.stats.value}
+                    </div>
+                  </div>
+
+                  {/* Audio Player */}
                   <AudioPlayer
-                    title={sample.title}
-                    description={sample.description}
                     audioUrl={sample.audioUrl}
                   />
                 </div>
@@ -118,7 +166,7 @@ export function Samples() {
             variants={itemVariants}
             className="relative mt-16 p-8 rounded-2xl border bg-card/50 backdrop-blur-sm"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl" />
+            <div id="try" className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl" />
             <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">Vyzkoušejte si voicebota naživo</h3>

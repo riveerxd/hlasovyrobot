@@ -5,12 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Play, Pause } from "lucide-react";
 
 interface AudioPlayerProps {
-  title: string;
-  description: string;
   audioUrl: string;
 }
 
-export function AudioPlayer({ title, description, audioUrl }: AudioPlayerProps) {
+export function AudioPlayer({ audioUrl }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio] = useState(typeof Audio !== "undefined" ? new Audio(audioUrl) : null);
 
@@ -26,10 +24,10 @@ export function AudioPlayer({ title, description, audioUrl }: AudioPlayerProps) 
   };
 
   return (
-    <div className="bg-background rounded-lg p-6 shadow-sm">
-      <div className="space-y-4">
-        <div className="h-12 w-full bg-muted rounded-md flex items-center justify-center">
-          <div className="w-full max-w-[200px] h-2 bg-primary/20 rounded-full overflow-hidden">
+    <div className="bg-background/50 rounded-lg p-4 shadow-sm">
+      <div className="space-y-3">
+        <div className="h-8 w-full bg-muted/50 rounded-md flex items-center justify-center">
+          <div className="w-full max-w-[200px] h-1.5 bg-primary/20 rounded-full overflow-hidden">
             <div
               className="h-full bg-primary transition-all duration-200"
               style={{
@@ -39,22 +37,21 @@ export function AudioPlayer({ title, description, audioUrl }: AudioPlayerProps) 
             />
           </div>
         </div>
-        <h3 className="font-semibold">{title}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
         <Button
           variant="outline"
-          className="w-full h-10 gap-2"
+          size="sm"
+          className="w-full gap-2"
           onClick={togglePlay}
         >
           {isPlaying ? (
             <>
-              <Pause className="h-4 w-4 shrink-0" />
-              <span className="truncate">Pozastavit</span>
+              <Pause className="w-4 h-4" />
+              Pozastavit ukázku
             </>
           ) : (
             <>
-              <Play className="h-4 w-4 shrink-0" />
-              <span className="truncate">Přehrát ukázku</span>
+              <Play className="w-4 h-4" />
+              Přehrát ukázku
             </>
           )}
         </Button>

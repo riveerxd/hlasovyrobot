@@ -19,8 +19,8 @@ export const metadata = {
   title: "hlasovyrobot.cz - Inteligentní Voiceboti pro vaše podnikání",
   description: "Tvoříme Voiceboty, kteří pracují 24/7, rozumí volajícím a řeší jejich problémy autonomně a bez čekání.",
   keywords: ["voicebot", "hlasový robot", "umělá inteligence", "AI asistent", "automatizace hovorů", "zákaznický servis"],
-  authors: [{ name: "GM MEDIA" }],
-  creator: "GM MEDIA",
+  authors: [{ name: "river" }],
+  creator: "river",
   publisher: "GM MEDIA",
   robots: "index, follow",
   alternates: {
@@ -61,7 +61,7 @@ export default function RootLayout({
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <Navbar />
-        <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100 via-blue-200 to-blue-100 -z-10" />
+        <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-200 via-white to-blue-100 -z-10" />
         {children}
         <Footer />
       </body>
