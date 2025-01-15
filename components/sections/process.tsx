@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarDays, MessageSquare, Plug, TestTube2, PlayCircle, Sparkles, Server, PhoneOutgoing, CheckSquare } from "lucide-react";
+import { CalendarDays, MessageSquare, Sparkles, Server, PhoneOutgoing, CheckSquare } from "lucide-react";
 
 const steps = [
   {
