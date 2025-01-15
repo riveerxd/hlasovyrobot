@@ -19,13 +19,13 @@ const features = [
   {
     title: "Inteligentní přepojování",
     description: "Voicebot v případě potřeby rozpozná dotaz a přepojí volajícího na živého operátora.",
-    details: "Na operátora jsou z pravidla směrovány jen velmi složité dotazy, které Voicebot zatím nedokáže vyřešit.",
+    details: "Na operátora jsou z pravidla směrovány jen velmi složité dotazy, které voicebot zatím nedokáže vyřešit.",
     icon: ArrowRightLeft
   },
   {
     title: "Vícejazyčnost",
     description: "Český, slovenský, anglický, německý či ukrajinský jazyk není problém.",
-    details: "Na začátku telefonátu Voicebot nasměruje volajícího na správnou jazykovou verzi. Vše probíhá automaticky.",
+    details: "Na začátku telefonátu voicebot nasměruje volajícího na správnou jazykovou verzi. Vše probíhá automaticky.",
     icon: Languages
   },
   {
