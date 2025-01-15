@@ -36,8 +36,8 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-muted-foreground">
-            Zvyšte svůj obrat s inteligentními voicebota. Efektivní komunikace, vyšší zisky.
-            </p>
+            Zvyšte svůj obrat s inteligentními voiceboty. Efektivní komunikace, vyšší zisky, spokojenější
+            zákazníci!            </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="try" smooth={true} duration={500} offset={-100} className="w-full">
