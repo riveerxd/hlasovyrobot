@@ -3,102 +3,36 @@
 import { motion} from "framer-motion";
 import { Phone, Clock, Languages, ArrowRightLeft, Database, ShoppingCart, Building2, MessageCircle, Bot, Sparkles } from "lucide-react";
 
-/*
-const features = [
-  {
-    title: "Hromadné volání",
-    description: "Uskuteční tisíce hovorů během pár minut. Šetří tím váš čas i peníze. Zvyšuje efektivitu podnikání.",
-    details: "Voicebot zavolá zákazníkovi, předá potřebné informace a získá od něj zpětnou vazbu.",
-    icon: Phone
-  },
-  {
-    title: "Nepřetržitý provoz",
-    description: "Pracuje 24/7. Rozumí problému zákazníka, vyřeší ho, nebo ho přepojí na živého operátora.",
-    details: "Voicebot umí přijímat více hovorů najednou a ihned je vyřídit. Takže se nikdy nestane, že budete mít obsazeno.",
-    icon: Clock
-  },
-  {
-    title: "Inteligentní přepojování",
-    description: "Voicebot v případě potřeby rozpozná dotaz a přepojí volajícího na živého operátora.",
-    details: "Na operátora jsou z pravidla směrovány jen velmi složité dotazy, které voicebot zatím nedokáže vyřešit.",
-    icon: ArrowRightLeft
-  },
-  {
-    title: "Vícejazyčnost",
-    description: "Český, slovenský, anglický, německý či ukrajinský jazyk není problém.",
-    details: "Na začátku telefonátu voicebot nasměruje volajícího na správnou jazykovou verzi. Vše probíhá automaticky.",
-    icon: Languages
-  },
-  {
-    title: "Datová integrace",
-    description: "Při hovoru dokáže využít informace o volajícím. Autonomně směřuje hovor dle nastavení v systému.",
-    details: "Real-time datová komunikace s Vaším CRM systémem.",
-    icon: Database
-  }
-];
-Hromadné volání
-Během pár minut uskuteční tisíce hovorů, čímž šetří váš čas i peníze. Výrazně zvyšuje efektivitu
-vašeho podnikání.
-Jak to funguje?
-Voicebot zavolá vašim zákazníkům, sdělí klíčové informace a získá od nich zpětnou vazbu.
-
-Inteligentní přepojování
-Voicebot dokáže rozpoznat dotaz a v případě potřeby přepojit volajícího na živého operátora.
-Efektivní řešení složitých dotazů
-Na operátory jsou směrovány pouze náročné případy, které voicebot aktuálně nezvládne vyřešit.
-
-Datová integrace
-Voicebot inteligentně pracuje s informacemi o volajícím a směřuje hovor podle nastavení vašeho
-systému.
-Propojení v reálném čase
-Díky real-time integraci s vaším CRM systémem má voicebot vždy aktuální data a dokáže okamžitě
-reagovat.
-
-Nepřetržitý provoz
-
-Voicebot pracuje 24/7. Rozumí problémům zákazníků, okamžitě je řeší, nebo je přesměruje na živého
-operátora.
-Vždy dostupný
-Voicebot zvládne zpracovat více hovorů současně. Už nikdy se nemusíte obávat, že by linka byla
-obsazena.
-
-Vícejazyčnost
-Voicebot bez problémů komunikuje česky, slovensky, anglicky, německy nebo ukrajinsky.
-Automatický výběr jazyka
-Hned na začátku hovoru voicebot rozpozná jazyk volajícího a automaticky ho nasměruje na správnou
-jazykovou verzi.
-*/
-
 const features = [
   {
     title: "Hromadné volání",
     description: "Během pár minut uskuteční tisíce hovorů, čímž šetří váš čas i peníze. Výrazně zvyšuje efektivitu vašeho podnikání.",
     details: "Voicebot zavolá vašim zákazníkům, sdělí klíčové informace a získá od nich zpětnou vazbu.",
-    icon: "Phone"
+    icon: Phone
   },
   {
     title: "Inteligentní přepojování",
     description: "Voicebot dokáže rozpoznat dotaz a v případě potřeby přepojit volajícího na živého operátora.",
     details: "Na operátory jsou směrovány pouze náročné případy, které voicebot aktuálně nezvládne vyřešit.",
-    icon: "Transfer"
+    icon: ArrowRightLeft
   },
   {
     title: "Datová integrace",
     description: "Voicebot inteligentně pracuje s informacemi o volajícím a směřuje hovor podle nastavení vašeho systému.",
     details: "Díky real-time integraci s vaším CRM systémem má voicebot vždy aktuální data a dokáže okamžitě reagovat.",
-    icon: "Database"
+    icon: Database
   },
   {
     title: "Nepřetržitý provoz",
     description: "Voicebot pracuje 24/7. Rozumí problémům zákazníků, okamžitě je řeší, nebo je přesměruje na živého operátora.",
     details: "Voicebot zvládne zpracovat více hovorů současně. Už nikdy se nemusíte obávat, že by linka byla obsazena.",
-    icon: "Clock"
+    icon: Clock
   },
   {
     title: "Vícejazyčnost",
     description: "Voicebot bez problémů komunikuje česky, slovensky, anglicky, německy nebo ukrajinsky.",
     details: "Hned na začátku hovoru voicebot rozpozná jazyk volajícího a automaticky ho nasměruje na správnou jazykovou verzi.",
-    icon: "Language"
+    icon: Languages
   }
 ];
 
@@ -176,7 +110,7 @@ export function Features() {
                 <Sparkles className="w-4 h-4" />
                 <span className="text-sm font-medium">Funkce voicebota</span>
               </div>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Trochu podrobněji</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Hlavní funkce našeho voicebota</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -214,7 +148,8 @@ export function Features() {
             <div className="text-center space-y-4">
               <h3 className="text-2xl font-bold">Příklady využití voicebota</h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Virtuálního asistenta využijete všude, kde chcete být neustále online a poskytovat profesionální služby
+              Virtuální asistent se skvěle hodí tam, kde potřebujete být stále k dispozici a poskytovat zákazníkům
+              profesionální podporu 24/7.
               </p>
             </div>
 

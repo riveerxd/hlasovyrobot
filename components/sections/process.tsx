@@ -1,45 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarDays, MessageSquare, Plug, TestTube2, PlayCircle, Sparkles } from "lucide-react";
+import { CalendarDays, MessageSquare, Plug, TestTube2, PlayCircle, Sparkles, Server, PhoneOutgoing, CheckSquare } from "lucide-react";
 
 const steps = [
   {
     title: "Úvodní setkání",
-    subtitle: "Bereme to osobně",
-    description: "Seznámení se s potřebami klienta, představení funkcí robota, příprava cenové nabídky a naplánování následné spolupráce.",
+    subtitle: "Bereme to osobně!",
+    description: "Seznámíme se s vašimi potřebami, představíme funkce voicebota, připravíme cenovou nabídku a naplánujeme další kroky spolupráce.",
     icon: CalendarDays,
     gradient: "from-blue-500/20 to-purple-500/20"
   },
   {
     title: "Návrh scénáře",
-    subtitle: "Jak to bude celé fungovat ?",
-    description: "Definice funkcí voicebota, příprava volacích scénářů v systému, návrh napojení na API, či jiné datové zdroje.",
+    subtitle: "Jak to celé bude fungovat?",
+    description: "Definujeme funkce, připravíme volací scénáře v systému a navrhneme integraci s API či jinými datovými zdroji.",
     icon: MessageSquare,
     gradient: "from-purple-500/20 to-pink-500/20"
   },
   {
     title: "Integrace robota",
-    subtitle: "Napojení na systémy",
-    description: "Propojení s ústřednou, implementace připojení na firemní systémy (CRM, e-shop, ... ).",
-    icon: Plug,
-    gradient: "from-pink-500/20 to-orange-500/20"
+    subtitle: "Napojení na vaše systémy",
+    description: "Propojíme voicebota s vaší ústřednou a implementujeme připojení k firemním systémům, jako jsou CRM, e-shop a další.",
+    icon: Server,
+    gradient: "from-pink-500/20 to-red-500/20"
   },
   {
     title: "Testování a schválení",
-    subtitle: "Dvakrát měř, jednou řež",
-    description: "Testování jednotlivých funkcí robota, definice ideální cesty robota hovorem, finální nastavení služby a schválení projektu zadavatelem.",
-    icon: TestTube2,
-    gradient: "from-orange-500/20 to-yellow-500/20"
+    subtitle: "Dvakrát měř, jednou řež!",
+    description: "Provedeme testování všech funkcí, definujeme ideální průběh hovoru a doladíme finální nastavení služby. Nakonec schválí projekt zadavatel.",
+    icon: CheckSquare,
+    gradient: "from-red-500/20 to-orange-500/20"
   },
   {
     title: "Uvedení do provozu",
-    subtitle: "Voicebot může začít!",
-    description: "Voicebot je uveden do provozu - dostupný na požadované lince nebo telefonuje na zvolené kontakty dle vytvořené kampaně.",
-    icon: PlayCircle,
-    gradient: "from-yellow-500/20 to-green-500/20"
+    subtitle: "Voicebot je připraven začít!",
+    description: "Voicebot je plně funkční a dostupný na požadované lince nebo může telefonovat na vybrané kontakty podle vytvořené kampaně.",
+    icon: PhoneOutgoing,
+    gradient: "from-orange-500/20 to-yellow-500/20"
   }
 ];
+
 
 export function Process() {
   return (
@@ -51,7 +52,7 @@ export function Process() {
             <Sparkles className="w-4 h-4" />
             <span className="text-sm font-medium">Jak to probíhá</span>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Postup spolupráce</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Kroky ke spolupráci</h2>
         </div>
       </div>
 

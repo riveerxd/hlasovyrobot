@@ -171,7 +171,7 @@ export function Samples() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">Vyzkoušejte si voicebota naživo</h3>
                 <p className="text-muted-foreground">
-                  Zavolejte na naše demo číslo a otestujte možnosti voicebota
+                Zavolejte na naše demo číslo a zeptejte se Voisey na možnosti využití voicebota ve vaší profesi!ě
                 </p>
               </div>
               <Button 

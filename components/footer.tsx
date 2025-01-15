@@ -22,11 +22,11 @@ export function Footer() {
           </div>
           
            <div className="space-y-3">
-            <h4 className="text-sm font-semibold">Ozvěte se nám</h4>
+            <h4 className="text-sm font-semibold">Máte dotazy? Ozvěte se nám!</h4>
               <div className="text-sm text-muted-foreground pt-2">
-                <a href="mailto:radek.hrehor@gmmedia.cz">Email: radek.hrehor@gmmedia.cz</a>
+                <a href="mailto:radek.hrehor@gmmedia.cz">Email: <span className="text-primary underline">radek.hrehor@gmmedia.cz</span></a>
                 <br />
-                <a href="tel:+420777325590">Tel.: 777 325 590</a>
+                <a href="tel:+420777325590">Tel.: <span className="text-primary underline">777 325 590</span> </a>
             </div>
           </div>
           

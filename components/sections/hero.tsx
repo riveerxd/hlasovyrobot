@@ -36,11 +36,11 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-muted-foreground">
-            Zvyšte svůj obrat s inteligentními Voiceboty. Efektivní komunikace, vyšší zisky.
+            Zvyšte svůj obrat s inteligentními voicebota. Efektivní komunikace, vyšší zisky.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="try" smooth={true} duration={500} offset={-500} className="w-full">
+              <Link to="try" smooth={true} duration={500} offset={-100} className="w-full">
               <Button size="lg" className="group">
                 Vyzkoušet zdarma
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -92,7 +92,7 @@ export function Hero() {
                     <Bot className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium">AI voicebot</p>
+                    <p className="font-medium">Voicey</p>
                     <div className="flex items-center gap-2">
                       <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -117,7 +117,7 @@ export function Hero() {
                   </div>
                 </div>
 
-                <Link to="try" smooth={true} duration={500} offset={-500} className="w-full gap-2 flex flex-row items-center bg-black rounded-lg p-3 text-white cursor-pointer">
+                <Link to="try" smooth={true} duration={500} offset={-100} className="w-full gap-2 flex flex-row items-center bg-black rounded-lg p-3 text-white cursor-pointer">
                   <Phone className="w-4 h-4" />
                   Vyzkoušet hovor s voicebotem
               
