@@ -6,7 +6,7 @@ export function Footer() {
           <div className="space-y-3">
             <h3 className="text-lg font-semibold">hlasovyrobot.cz</h3>
             <p className="text-sm text-muted-foreground">
-              Tvoříme inteligentní Voiceboty pro efektivní komunikaci s vašimi zákazníky.
+              Tvoříme inteligentní voiceboty pro efektivní komunikaci s vašimi zákazníky.
             </p>
           </div>
           <div className="space-y-3">

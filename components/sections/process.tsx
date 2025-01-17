@@ -63,7 +63,7 @@ export function Process() {
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/5 via-primary/10 to-primary/5 -translate-x-1/2" />
 
           {/* Steps */}
-          <div className="relative space-y-">
+          <div className="relative -space-y-8">
             {steps.map((step, index) => (
               <div key={step.title} className="relative">
                 <div className="grid md:grid-cols-2 gap-8 md:gap-16">

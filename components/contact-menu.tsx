@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { useEffect } from "react";
 
 interface ContactMenuProps {
   isOpen: boolean;
@@ -10,6 +11,17 @@ interface ContactMenuProps {
 }
 
 export function ContactMenu({ isOpen, onClose }: ContactMenuProps) {
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscKey);
+    return () => document.removeEventListener("keydown", handleEscKey);
+  }, [isOpen, onClose]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -38,8 +50,8 @@ export function ContactMenu({ isOpen, onClose }: ContactMenuProps) {
             >
               <div className="relative overflow-hidden rounded-2xl border bg-card p-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20 z-10" />
-                <div className="relative z-20 space-y-8">
-                  <div className="flex justify-between items-center">
+                <div className="relative z-20 space-y-2">
+                  <div className="flex justify-between items-start">
                     <div className="space-y-1">
                       <h2 className="text-2xl font-bold">Kontaktujte nás</h2>
                       <p className="text-muted-foreground">Jsme tu pro vás</p>

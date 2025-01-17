@@ -112,14 +112,14 @@ export function Hero() {
                   </div>
                   <div className="flex gap-2 items-start justify-end">
                     <p className="text-sm bg-primary/10 rounded-lg p-3">
-                      Zajímá mě více informací o voicebotech...
+                      Zajímá mě více informací o hlasových robotech...
                     </p>
                   </div>
                 </div>
 
                 <Link to="try" smooth={true} duration={500} offset={-100} className="w-full gap-2 flex flex-row items-center bg-black rounded-lg p-3 text-white cursor-pointer">
                   <Phone className="w-4 h-4" />
-                  Vyzkoušet hovor s voicebotem
+                  Vyzkoušet hovor s hlasovým robotem
               
                 </Link>
               </div>

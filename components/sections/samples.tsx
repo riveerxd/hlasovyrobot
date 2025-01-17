@@ -100,7 +100,7 @@ export function Samples() {
             </motion.div>
             
             <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold tracking-tight">
-              Voicebot v akci
+              hlasový robot v akci
             </motion.h2>
             <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Reálné ukázky našich voicebotů při řešení různých situací
@@ -169,7 +169,7 @@ export function Samples() {
             <div id="try" className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl" />
             <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold">Vyzkoušejte si voicebota naživo</h3>
+                <h3 className="text-2xl font-bold">Vyzkoušejte si hlasového robota naživo</h3>
                 <p className="text-muted-foreground">
                 Zavolejte na naše demo číslo a zeptejte se Voisey na možnosti využití voicebota ve vaší profesi!ě
                 </p>
