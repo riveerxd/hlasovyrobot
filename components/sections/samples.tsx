@@ -183,7 +183,7 @@ export function Samples() {
                   +420 910 129 305
                 </Button>
                 <p className="text-sm text-muted-foreground">
-                Pokud vám okolnosti neumožňují telefonovat, využijte chat – všechny potřebné informace obdržíte v textové podobě místo hlasové komunikace.
+                Pokud vám okolnosti neumožňují telefonovat, využijte náš chat – získáte všechny potřebné informace, jen místo mého hlasu budete číst text.
                 </p>
               </div>
             </div>
