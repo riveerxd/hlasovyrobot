@@ -182,8 +182,8 @@ export function Samples() {
                   <Phone className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
                   +420 910 129 305
                 </Button>
-                <p>
-                Pokud vám okolnosti neumožňují telefonovat, využijte náš chat – získáte všechny potřebné informace, jen místo mého hlasu budete číst text.
+                <p className="text-sm text-muted-foreground">
+                Pokud vám okolnosti neumožňují telefonovat, využijte chat – všechny potřebné informace obdržíte v textové podobě místo hlasové komunikace.
                 </p>
               </div>
             </div>
