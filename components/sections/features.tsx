@@ -1,32 +1,38 @@
 "use client";
 
 import { motion} from "framer-motion";
-import { Phone, Clock, Languages, ArrowRightLeft, Database, ShoppingCart, Building2, MessageCircle, Bot, Sparkles } from "lucide-react";
+import { Phone, Clock, Languages, ArrowRightLeft, Database, ShoppingCart, Building2, MessageCircle, Bot, Sparkles, Globe } from "lucide-react";
+
 
 const features = [
   {
     title: "Hromadné volání",
-    description: "Během pár minut uskuteční tisíce hovorů, čímž šetří váš čas i peníze. Výrazně zvyšuje efektivitu vašeho podnikání. Hlasový robot zavolá vašim zákazníkům, sdělí klíčové informace a získá od nich zpětnou vazbu.",
+    description: "Během pár minut uskuteční tisíce hovorů, čímž šetří váš čas i peníze. Výrazně zvyšuje efektivitu vašeho podnikání.",
+    details: "Voicebot zavolá vašim zákazníkům, sdělí klíčové informace a získá od nich zpětnou vazbu.",
     icon: Phone
   },
   {
     title: "Inteligentní přepojování",
-    description: "Hlasový robot dokáže rozpoznat dotaz a v případě potřeby přepojit volajícího na živého operátora. Na operátory jsou směrovány pouze náročné případy, které hlasový robot aktuálně nezvládne vyřešit.",
+    description: "Hlasový robot dokáže rozpoznat dotaz a v případě potřeby přepojit volajícího na živého operátora.",
+    details: "Na operátory jsou směrovány pouze náročné případy, které voicebot aktuálně nezvládne vyřešit.",
     icon: ArrowRightLeft
   },
   {
     title: "Datová integrace",
-    description: "Hlasový robot inteligentně pracuje s informacemi o volajícím a směřuje hovor podle nastavení vašeho systému. Díky real-time integraci s vaším CRM systémem má hlasový robot vždy aktuální data a dokáže okamžitě reagovat.",
+    description: "Hlasový robot inteligentně pracuje s informacemi o volajícím a směřuje hovor podle nastavení vašeho systému.",
+    details: "Díky real-time integraci s vaším CRM systémem má voicebot vždy aktuální data a dokáže okamžitě reagovat.",
     icon: Database
   },
   {
     title: "Nepřetržitý provoz",
-    description: "Hlasový robot pracuje 24/7. Rozumí problémům zákazníků, okamžitě je řeší, nebo je přesměruje na živého operátora. Hlasový robot zvládne zpracovat více hovorů současně. Už nikdy se nemusíte obávat, že by linka byla obsazena.",
+    description: "Hlasový robot pracuje 24/7. Rozumí problémům zákazníků, okamžitě je řeší, nebo je přesměruje na živého operátora.",
+    details: "Voicebot zvládne zpracovat více hovorů současně. Už nikdy se nemusíte obávat, že by linka byla obsazena.",
     icon: Clock
   },
   {
     title: "Vícejazyčnost",
-    description: "Hlasový robot bez problémů komunikuje česky, slovensky, anglicky, německy nebo ukrajinsky. Hned na začátku hovoru voicebot rozpozná jazyk volajícího a automaticky ho nasměruje na správnou jazykovou verzi.",
+    description: "Hlasový robot bez problémů komunikuje česky, slovensky, anglicky, německy nebo ukrajinsky.",
+    details: "Hned na začátku hovoru voicebot rozpozná jazyk volajícího a automaticky ho nasměruje na správnou jazykovou verzi.",
     icon: Languages
   }
 ];
@@ -48,8 +54,8 @@ const useCases = [
     statLabel: "Dostupnost"
   },
   {
-    text: "Pracuje nepřetržitě",
-    description: "Nepřetržitá dostupnost pro vaše zákazníky",
+    text: "Žádné čekání",
+    description: "Okamžité spojení s voicebotem, žádné obsazené linky",
     icon: Clock,
     stat: "0s",
     statLabel: "Čekací doba"
@@ -58,7 +64,7 @@ const useCases = [
     text: "Zpětná vazba",
     description: "Automatický sběr hodnocení a připomínek",
     icon: MessageCircle,
-    stat: "500+",
+    stat: "5,000+",
     statLabel: "Hovorů denně"
   },
   {
@@ -67,7 +73,15 @@ const useCases = [
     icon: Bot,
     stat: "80%",
     statLabel: "Automatizace"
+  },
+  {
+    text: "Informační portál",
+    description: "Okamžité odpovědi na vše – od cen po počasí",
+    icon: Globe,
+    stat: <span className="text-4xl">∞</span>,
+    statLabel: "Informací"
   }
+  
 ];
 
 export function Features() {
@@ -105,7 +119,7 @@ export function Features() {
                 <Sparkles className="w-4 h-4" />
                 <span className="text-sm font-medium">Funkce hlasového robota</span>
               </div>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Hlavní funkce našeho hlasového robota</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Hlavní funkce našeho voicebota</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -114,17 +128,20 @@ export function Features() {
                   key={feature.title}
                   variants={itemVariants}
                   whileHover={{ scale: 1.02 }}
-                  className="relative group"
+                  className="relative group h-full"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/0 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative p-6 rounded-2xl border bg-card/50 backdrop-blur-sm space-y-4">
+                  <div className="relative h-full p-6 rounded-2xl border bg-card/50 backdrop-blur-sm space-y-4 flex flex-col">
                     <div className="flex items-center gap-4">
                       <div className="p-3 rounded-xl bg-primary/10 group-hover:scale-110 transition-transform">
                         <feature.icon className="h-6 w-6 text-primary" />
                       </div>
                       <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{feature.title}</h3>
                     </div>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <div className="flex-1 flex flex-col justify-between">
+                      <p className="text-muted-foreground">{feature.description}</p>
+                      <p className="text-muted-foreground mt-4">{feature.details}</p>
+                    </div>
                   </div>
                 </motion.div>
               ))}

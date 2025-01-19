@@ -58,7 +58,7 @@ const samples = [
 
 export function Samples() {
   const handleCall = () => {
-    window.location.href = "tel:+420910128552";
+    window.location.href = "tel:+420910129305";
   };
 
   const containerVariants = {
@@ -171,7 +171,7 @@ export function Samples() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">Vyzkoušejte si hlasového robota naživo</h3>
                 <p className="text-muted-foreground">
-                Zavolejte na naše demo číslo a zeptejte se Voisey na možnosti využití voicebota ve vaší profesi!ě
+                Zavolejte na naše demo číslo <span className="font-bold">zdarma</span> a zeptejte se Voicey na možnosti využití voicebota ve vaší profesi!
                 </p>
               </div>
               <Button 
@@ -180,7 +180,7 @@ export function Samples() {
                 onClick={handleCall}
               >
                 <Phone className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-                +420 910 128 552
+                +420 910 129 305
               </Button>
             </div>
           </motion.div>
