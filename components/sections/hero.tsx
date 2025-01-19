@@ -1,18 +1,13 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { ReactTyped } from "react-typed";
-import { ArrowRight, Phone, Sparkles, PlayCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedNumbers from "react-animated-numbers";
-import { Link } from "react-scroll";
 
 export function Hero() {
   return (
     <section id="hero" className="relative w-full pt-16 md:pt-20 pb-8">
-      {/* Background Elements */}
-      
-
       <div className="container max-w-5xl mx-auto px-4">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Badge */}
