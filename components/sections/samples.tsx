@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Phone, Volume2, Calendar, Settings, FileEdit } from "lucide-react";
+import { Phone, Volume2, Calendar, Settings, FileEdit, Bot, MessageSquare } from "lucide-react";
 import { AudioPlayer } from "@/components/audio-player";
 import { motion } from "framer-motion";
 
@@ -164,24 +164,71 @@ export function Samples() {
           {/* CTA Section */}
           <motion.div
             variants={itemVariants}
-            className="relative mt-16 p-8 rounded-2xl border bg-card/50 backdrop-blur-sm"
+            className="relative mt-16 grid md:grid-cols-2 gap-8"
           >
-            <div id="try" className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl" />
-            <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="space-y-4">
+            {/* Call Section */}
+            <div className="relative p-8 rounded-2xl border bg-card/50 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl" />
+              <div id="try" className="relative space-y-4">
                 <h3 className="text-2xl font-bold">Vyzkoušejte si hlasového robota naživo</h3>
                 <p className="text-muted-foreground">
-                Zavolejte na naše demo číslo <span className="font-bold">zdarma</span> a zeptejte se Voicey na možnosti využití voicebota ve vaší profesi!
+                  Zavolejte na naše demo číslo <span className="font-bold">zdarma</span> a zeptejte se Voicey na možnosti využití voicebota ve vaší profesi!
+                </p>
+                <Button 
+                  size="lg" 
+                  className="w-full group"
+                  onClick={handleCall}
+                >
+                  <Phone className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                  +420 910 129 305
+                </Button>
+                <p>
+                Pokud vám okolnosti neumožňují telefonovat, využijte náš chat – získáte všechny potřebné informace, jen místo mého hlasu budete číst text.
                 </p>
               </div>
-              <Button 
-                size="lg" 
-                className="min-w-[200px] group"
-                onClick={handleCall}
-              >
-                <Phone className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-                +420 910 129 305
-              </Button>
+            </div>
+
+            {/* Chat Section */}
+            <div className="relative p-8 rounded-2xl border bg-card/50 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-card rounded-2xl" />
+              <div className="relative space-y-6 ">
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Bot className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium">Voicey</p>
+                    <div className="flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                      </span>
+                      <p className="text-sm text-muted-foreground">Online</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex gap-2 items-start">
+                    <MessageSquare className="w-4 h-4 mt-1 text-primary" />
+                    <p className="text-sm bg-muted rounded-lg p-3">
+                      Dobrý den, jak vám mohu pomoci?
+                    </p>
+                  </div>
+                  <div className="flex gap-2 items-start justify-end">
+                    <p className="text-sm bg-primary/10 rounded-lg p-3">
+                      Zajímá mě více informací o hlasových robotech...
+                    </p>
+                  </div>
+                </div>
+
+                
+                  <Button variant="outline" size="lg" className="w-full gap-2">
+                    <MessageSquare className="w-4 h-4" />
+                    Chatovat s Voicey
+                  </Button>
+                
+              </div>
             </div>
           </motion.div>
         </motion.div>

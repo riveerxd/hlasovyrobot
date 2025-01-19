@@ -35,7 +35,7 @@ const steps = [
   {
     title: "Uvedení do provozu",
     subtitle: "Voicebot je připraven začít!",
-    description: "Voicebot je plně funkční a dostupný na požadované lince nebo může telefonovat na vybrané kontakty podle vytvořené kampaně.",
+    description: "Je plně funkční a dostupný na požadované lince nebo může telefonovat na vybrané kontakty podle vytvořené kampaně.",
     icon: PhoneOutgoing,
     gradient: "from-orange-500/20 to-yellow-500/20"
   }
@@ -63,7 +63,7 @@ export function Process() {
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/5 via-primary/10 to-primary/5 -translate-x-1/2" />
 
           {/* Steps */}
-          <div className="relative -space-y-8">
+          <div className="relative space-y-8 md:-space-y-8">
             {steps.map((step, index) => (
               <div key={step.title} className="relative">
                 <div className="grid md:grid-cols-2 gap-8 md:gap-16">

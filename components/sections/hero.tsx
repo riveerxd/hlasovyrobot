@@ -27,7 +27,7 @@ export function Hero() {
               <span className="block">Váš virtuální</span>
               <span className="text-primary">
                 <ReactTyped
-                  strings={["asistent", "operátor", "prodejce"]}
+                  strings={["operátor", "asistent", "prodejce", "konzultant", "recepční"]}
                   typeSpeed={120}
                   backSpeed={80}
                   loop

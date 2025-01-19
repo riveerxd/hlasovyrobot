@@ -15,7 +15,7 @@ export function Navbar() {
     { label: "Ukázky", to: "samples" },
     { label: "Funkce", to: "features" },
     { label: "Využití", to: "use-cases" },
-    { label: "Postup", to: "process" },
+    { label: "Jak na to", to: "process" },
   ];
 
   return (
@@ -87,7 +87,7 @@ export function Navbar() {
             opacity: isMenuOpen ? 1 : 0,
             height: isMenuOpen ? "auto" : 0
           }}
-          className="md:hidden border-t bg-background overflow-hidden"
+          className="md:hidden border-t bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60 z-50 overflow-hidden"
         >
           <div className="container max-w-5xl mx-auto px-4 py-4 flex flex-col gap-4">
             {menuItems.map((item) => (
