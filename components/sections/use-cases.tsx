@@ -69,7 +69,7 @@ export function UseCases() {
     };
 
     return (
-        <section id="use-cases" className="relative w-full py-24 md:py-32 overflow-hidden">
+        <section id="use-cases" className="relative w-full py-12 md:py-16 overflow-hidden">
             <div className="container relative max-w-5xl mx-auto px-4">
                 <motion.div
                     initial="hidden"

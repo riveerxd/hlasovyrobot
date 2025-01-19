@@ -83,7 +83,7 @@ export function Samples() {
   };
 
   return (
-    <section id="samples" className="relative w-full py-20 md:py-24 overflow-hidden">
+    <section id="samples" className="relative w-full py-10 md:py-12 overflow-hidden">
       <div className="container relative max-w-5xl mx-auto px-4">
         <motion.div
           initial="hidden"

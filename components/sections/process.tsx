@@ -44,7 +44,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="relative w-full py-24 md:py-32">
+    <section id="process" className="relative w-full py-12 md:py-16">
       {/* Header */}
       <div className="container max-w-5xl mx-auto px-4 mb-16">
         <div className="text-center space-y-4">

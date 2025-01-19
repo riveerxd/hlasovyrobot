@@ -62,7 +62,7 @@ export function Features() {
   };
 
   return (
-    <section id="features" className="relative w-full py-24 md:py-32 overflow-hidden">
+    <section id="features" className="relative w-full py-12 md:py-16 overflow-hidden">
       <div className="container relative max-w-5xl mx-auto px-4">
         <motion.div
           initial="hidden"
