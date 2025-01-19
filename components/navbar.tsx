@@ -14,6 +14,7 @@ export function Navbar() {
   const menuItems = [
     { label: "Ukázky", to: "samples" },
     { label: "Funkce", to: "features" },
+    { label: "Využití", to: "use-cases" },
     { label: "Postup", to: "process" },
   ];
 

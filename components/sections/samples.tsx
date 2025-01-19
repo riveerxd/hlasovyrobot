@@ -83,7 +83,7 @@ export function Samples() {
   };
 
   return (
-    <section id="samples" className="relative w-full py-24 md:py-32 overflow-hidden">
+    <section id="samples" className="relative w-full py-20 md:py-24 overflow-hidden">
       <div className="container relative max-w-5xl mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -96,11 +96,11 @@ export function Samples() {
           <div className="text-center space-y-6">
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
               <Volume2 className="w-4 h-4" />
-              <span className="text-sm font-medium">Poslechněte si ukázky</span>
+              <span className="text-sm font-medium">Ukázky</span>
             </motion.div>
             
             <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold tracking-tight">
-              hlasový robot v akci
+              Hlasový robot v akci
             </motion.h2>
             <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Reálné ukázky našich voicebotů při řešení různých situací

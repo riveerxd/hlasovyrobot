@@ -8,7 +8,7 @@ import AnimatedNumbers from "react-animated-numbers";
 import { Link } from "react-scroll";
 export function Hero() {
   return (
-    <section id="hero" className="relative w-full pt-32 md:pt-40 pb-20">
+    <section id="hero" className="relative w-full pt-32 md:pt-40 pb-16">
       <div className="container max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}

@@ -50,7 +50,7 @@ export function Process() {
         <div className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
             <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Jak to probíhá</span>
+            <span className="text-sm font-medium">Jak na to</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Kroky ke spolupráci</h2>
         </div>
