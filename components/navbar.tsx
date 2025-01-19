@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { ContactMenu } from "./contact-menu";
-
+import Image from "next/image";
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -26,14 +26,18 @@ export function Navbar() {
       >
         <div className="container max-w-[90rem] mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
-            <Link
-              to="hero"
-              smooth={true}
-              duration={500}
-              offset={-100}
-              className="text-2xl font-bold cursor-pointer hover:text-primary transition-colors"
-            >
-              HlasovyRobot.cz
+          <Link
+            to="hero"
+            smooth={true}
+            duration={500}
+            offset={-100}
+            className="text-2xl font-bold cursor-pointer hover:text-primary transition-colors flex flex-col items-center gap-2 mt-3 font-heading"
+          >
+            HlasovyRobot.cz
+            <div className="flex flex-row items-center -mt-5 gap-2 pl-16">
+              <a className="text-sm text-muted-foreground font-sans">powered by</a>
+              <Image src="/images/vocalls-logo.svg" alt="Vocalls Logo" className="w-[4rem] h-10" width={64} height={40}/>
+              </div>
             </Link>
 
             {/* Desktop Menu */}
