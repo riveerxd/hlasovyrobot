@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Volume2, Calendar, Settings, FileEdit, Bot, MessageSquare } from "lucide-react";
 import { AudioPlayer } from "@/components/audio-player";
 import { motion } from "framer-motion";
+import ChatbotWindow from "../VocallsChatbot";
 
 const samples = [
   {
@@ -189,48 +190,11 @@ export function Samples() {
             </div>
 
             {/* Chat Section */}
-            <div className="relative p-8 rounded-2xl border bg-card/50 backdrop-blur-sm">
-              <div className="absolute inset-0 bg-card rounded-2xl" />
-              <div className="relative space-y-6 ">
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Bot className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Voicey</p>
-                    <div className="flex items-center gap-2">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                      </span>
-                      <p className="text-sm text-muted-foreground">Online</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex gap-2 items-start">
-                    <MessageSquare className="w-4 h-4 mt-1 text-primary" />
-                    <p className="text-sm bg-muted rounded-lg p-3">
-                      Dobrý den, jak vám mohu pomoci?
-                    </p>
-                  </div>
-                  <div className="flex gap-2 items-start justify-end">
-                    <p className="text-sm bg-primary/10 rounded-lg p-3">
-                      Zajímá mě více informací o hlasových robotech...
-                    </p>
-                  </div>
-                </div>
-
-                
-                  <Button variant="outline" size="lg" className="w-full gap-2">
-                    <MessageSquare className="w-4 h-4" />
-                    Chatovat s Voicey
-                  </Button>
-                
-              </div>
-            </div>
+            
+            
+            
           </motion.div>
+          <ChatbotWindow flowId="10ba6905-3ed6-4621-be16-24999d87cdf5" />
         </motion.div>
       </div>
     </section>
